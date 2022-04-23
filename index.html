@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="px-5 py-5">
+
+    <!-- Form  -->
+    <form class="flex flex-col border py-5 px-3 rounded shadow-lg" action="">
+      <label class="mb-2" for="email">Email address</label>
+      <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200" type="email" name="nameemail" id="email">
+      <p class="text-sm text-gray-500 px-1 mb-3">We'll never share your email with anyone else.</p>
+
+
+      <label class="mb-2" for="password">Password</label>
+      <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 mb-4" type="password" name="namepassword" id="password">
+
+      <div class="py-3">
+        <input class="inline-block" type="checkbox" name="namecheckbox" id="check">
+        <label for="check">Check me out</label>
+      </div>
+
+      <button class="bg-blue-500 text-white py-2 px-3 rounded hover:bg-blue-600 focus:bg-blue-600 focus:ring-4 focus:ring-blue-300 focus:outline-none cursor-pointer inline-block w-32" type="submit">Submit</button>
+    </form>
+
+<!-- Password -->
+    <form class="flex flex-col border py-5 px-3 rounded shadow-lg" action="">
+      <div>
+        <label class="mb-2" for="password">Password</label>
+        <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 mb-3 mx-5" type="password" name="namepassword" id="password">
+
+        <span class="text-sm text-gray-400">Must be 8-20 characters long. </span>
+      </div>
+    </form>
+
+
+    <!-- Disabled -->
+    <form class="flex flex-col border py-5 px-3 rounded shadow-lg" action="">
+      <label class="mb-2" for="email">Email address</label>
+      <input class="outline-none border border-gray-500 rounded py-1 px-3 bg-gray-300" type="email" name="nameemail" id="email" disabled>
+      <p class="text-sm text-gray-500 px-1 mb-3">We'll never share your email with anyone else.</p>
+
+
+      <label class="mb-2" for="password">Password</label>
+      <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 mb-4 bg-gray-300" type="password" name="namepassword" id="password" disabled>
+
+      <div class="py-3">
+        <input class="inline-block" type="checkbox" name="namecheckbox" id="check" disabled>
+        <label for="check">Check me out</label>
+      </div>
+
+      <button class="bg-blue-500 text-white py-2 px-3 rounde bg-opacity-30  inline-block w-32 cursor-not-allowed" type="submit" disabled>Submit</button>
+    </form>
+
+
+  </body>
+</html>
