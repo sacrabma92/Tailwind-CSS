@@ -1,0 +1,72 @@
+    <!-- Form  -->
+    <form class="flex flex-col border py-5 px-3 rounded shadow-lg" action="">
+        <label class="mb-2" for="email">Email address</label>
+        <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200" type="email" name="nameemail" id="email">
+        <p class="text-sm text-gray-500 px-1 mb-3">We'll never share your email with anyone else.</p>
+  
+  
+        <label class="mb-2" for="password">Password</label>
+        <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 mb-4" type="password" name="namepassword" id="password">
+  
+        <div class="py-3">
+          <input class="inline-block" type="checkbox" name="namecheckbox" id="check">
+          <label for="check">Check me out</label>
+        </div>
+  
+        <button class="bg-blue-500 text-white py-2 px-3 rounded hover:bg-blue-600 focus:bg-blue-600 focus:ring-4 focus:ring-blue-300 focus:outline-none cursor-pointer inline-block w-32" type="submit">Submit</button>
+      </form>
+  
+  <!-- Password -->
+      <form class="flex flex-col border py-5 px-3 rounded shadow-lg" action="">
+        <div>
+          <label class="mb-2" for="password">Password</label>
+          <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 mb-3 mx-5" type="password" name="namepassword" id="password">
+  
+          <span class="text-sm text-gray-400">Must be 8-20 characters long. </span>
+        </div>
+      </form>
+  
+  
+      <!-- Disabled -->
+      <form class="flex flex-col border py-5 px-3 rounded shadow-lg" action="">
+        <label class="mb-2" for="email">Email address</label>
+        <input class="outline-none border border-gray-500 rounded py-1 px-3 bg-gray-200" type="email" name="nameemail" id="email" disabled>
+        <p class="text-sm text-gray-500 px-1 mb-3">We'll never share your email with anyone else.</p>
+  
+  
+        <label class="mb-2" for="password">Password</label>
+        <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 mb-4 bg-gray-200" type="password" name="namepassword" id="password" disabled>
+  
+        <div class="py-3">
+          <input class="inline-block" type="checkbox" name="namecheckbox" id="check" disabled>
+          <label class="text-gray-400" for="check">Check me out</label>
+        </div>
+  
+        <button class="bg-blue-500 text-white py-2 px-3 rounde bg-opacity-30  inline-block w-32 cursor-not-allowed" type="submit" disabled>Submit</button>
+      </form>
+
+<!-- Fomulario -->
+
+<form class="flex flex-col border py-5 px-3 rounded shadow-lg mb-5" action="">
+    <label class="mb-2" for="email" >Email address</label>
+    <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 mb-3" type="email" name="nameemail" id="email" placeholder="name@example.com">
+
+    <label class="mb-2" for="text">Example textarea</label>
+    <textarea class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 mb-3" name="nametext" id="text" cols="1" rows="5"></textarea>
+
+    <button class="bg-blue-500 text-white py-2 px-3 rounded hover:bg-blue-600 focus:bg-blue-600 focus:ring-4 focus:ring-blue-300 focus:outline-none cursor-pointer inline-block w-32" type="submit">Submit</button>
+  </form>
+
+  <form class="flex flex-col my-5 border" action="">
+    <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-2 px-3 focus:ring-4 focus:ring-blue-200 mb-3 text-lg" placeholder=".form-control-lg" type="text">
+
+    <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 mb-3" type="text" placeholder="Default input">
+
+    <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 mb-3 text-sm" type="text" placeholder=".form-control-sm">
+
+        <!-- ReadOnly -->
+    <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 bg-gray-400 bg-opacity-30 mb-3" type="text" placeholder="Readonly input here..." readonly>
+
+    <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 bg-gray-400 bg-opacity-30 mb-3" type="text" value="email@example.com" readonly>
+  </form>
+

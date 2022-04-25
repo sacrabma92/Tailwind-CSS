@@ -7,56 +7,59 @@
     <title>Tailwind</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/tippy.js@6/themes/light-border.css"
+  />
   </head>
   <body class="px-5 py-5">
 
-    <!-- Form  -->
-    <form class="flex flex-col border py-5 px-3 rounded shadow-lg" action="">
-      <label class="mb-2" for="email">Email address</label>
-      <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200" type="email" name="nameemail" id="email">
-      <p class="text-sm text-gray-500 px-1 mb-3">We'll never share your email with anyone else.</p>
+    <div>
+      <button class="bg-blue-500 text-white py-2 px-3 rounded hover:bg-blue-600 focus:bg-blue-600 focus:ring-4 focus:ring-blue-300 focus:outline-none cursor-pointer" data-hc-control="primer">Link with hred</button>
 
+      <button class="bg-blue-500 text-white py-2 px-3 rounded hover:bg-blue-600 focus:bg-blue-600 focus:ring-4 focus:ring-blue-300 focus:outline-none cursor-pointer" data-hc-control="primer">Button with data-bs-target</button>
 
-      <label class="mb-2" for="password">Password</label>
-      <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 mb-4" type="password" name="namepassword" id="password">
+      <p class="px-2 py-2 border-2 mt-5" data-hc-content="primer">Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger. </p>
 
-      <div class="py-3">
-        <input class="inline-block" type="checkbox" name="namecheckbox" id="check">
-        <label for="check">Check me out</label>
-      </div>
+      <button class="bg-blue-500 text-white py-2 px-3 rounded hover:bg-blue-600 focus:bg-blue-600 focus:ring-4 focus:ring-blue-300 focus:outline-none cursor-pointer" data-sc-control="primer">Toogle firs element</button>
+      
+      <button class="bg-blue-500 text-white py-2 px-3 rounded hover:bg-blue-600 focus:bg-blue-600 focus:ring-4 focus:ring-blue-300 focus:outline-none cursor-pointer" data-sc-control="second">Toogle second element</button>
 
-      <button class="bg-blue-500 text-white py-2 px-3 rounded hover:bg-blue-600 focus:bg-blue-600 focus:ring-4 focus:ring-blue-300 focus:outline-none cursor-pointer inline-block w-32" type="submit">Submit</button>
-    </form>
+      <button class="bg-blue-500 text-white py-2 px-3 rounded hover:bg-blue-600 focus:bg-blue-600 focus:ring-4 focus:ring-blue-300 focus:outline-none cursor-pointer" onclick="secondCollapseOP()">Toogle all element</button>
 
-<!-- Password -->
-    <form class="flex flex-col border py-5 px-3 rounded shadow-lg" action="">
       <div>
-        <label class="mb-2" for="password">Password</label>
-        <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 focus:ring-2 focus:ring-blue-200 mb-3 mx-5" type="password" name="namepassword" id="password">
+        <p class="w-2/5  px-2 py-2 border-2 my-5 mx-1 rounded inline-block" data-sc-content="primer">Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
 
-        <span class="text-sm text-gray-400">Must be 8-20 characters long. </span>
-      </div>
-    </form>
-
-
-    <!-- Disabled -->
-    <form class="flex flex-col border py-5 px-3 rounded shadow-lg" action="">
-      <label class="mb-2" for="email">Email address</label>
-      <input class="outline-none border border-gray-500 rounded py-1 px-3 bg-gray-300" type="email" name="nameemail" id="email" disabled>
-      <p class="text-sm text-gray-500 px-1 mb-3">We'll never share your email with anyone else.</p>
-
-
-      <label class="mb-2" for="password">Password</label>
-      <input class="outline-none border border-gray-500 focus:border-blue-500 rounded py-1 px-3 mb-4 bg-gray-300" type="password" name="namepassword" id="password" disabled>
-
-      <div class="py-3">
-        <input class="inline-block" type="checkbox" name="namecheckbox" id="check" disabled>
-        <label for="check">Check me out</label>
+        <p class="w-2/5  px-2 py-2 border-2 my-5 mx-1 rounded inline-block" data-sc-content="second">Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
       </div>
 
-      <button class="bg-blue-500 text-white py-2 px-3 rounde bg-opacity-30  inline-block w-32 cursor-not-allowed" type="submit" disabled>Submit</button>
-    </form>
 
 
+    </div>
+
+    <script src="handy-colapse.js"></script>
+    <script>
+          const primerCollapse = new HandyCollapse();
+
+          const secondCollapse = new HandyCollapse({
+            nameSpace: "sc",
+            closeOthers: false,
+            animationSpped: 100,
+            cssEasing: "linear",
+          });
+
+          function secondCollapseOP(){
+            // console.log(secondCollapse.itemsState);
+            for (const element in secondCollapse.itemsState) {
+              if(secondCollapse.itemsState[element].isOpen){
+                  secondCollapse.close(element);
+                  continue;
+              }
+                secondCollapse.open(element);
+              }
+            }
+           
+    </script>
   </body>
 </html>
